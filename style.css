@@ -1,0 +1,76 @@
+img{
+  height: 80px;
+  width: 80px;
+}
+
+table{
+  display: flexbox;
+  margin: auto;
+}
+
+td{
+  height: 100px;
+  width: 100px;
+}
+
+.no{
+  height: 0px;
+  width: 0px;
+  box-shadow: 0px 0px 8px 3px rgb(0,200,200);
+  background-color: white;
+}
+
+.no:hover{
+  background-color: white;
+}
+
+td:hover{
+  background-color: rgb(0, 20, 20);
+}
+
+table, td{
+  border-collapse: collapse;
+}
+h1{
+  font-size: 40px;
+  color: gainsboro;
+}
+
+body {
+  background-color: #1d1e22;
+  color: white;
+  text-align: center;
+  font-family: cursive;
+}
+
+.blink {
+  animation: blinker 0.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.footer{
+  bottom: 0;
+  text-align: right;
+  padding: 10px;
+  width: 95%;
+  position: fixed;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.button{
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  font-size: 50px;
+}
+
+.button:hover{
+  cursor: pointer;
+}
