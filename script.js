@@ -13,8 +13,7 @@ function exe(){
 	let id = main.id;
   
 	if(id != "" && main.innerHTML==""){
-    write(main, id);
-    console.log("written");     
+    write(main, id);    
       
     if(X==3 && O==3){
       blinkit();
@@ -64,10 +63,10 @@ function checkit(symbol){
     if((array.includes('00') && array.includes('11') && array.includes('22')) ||(array.includes('02') && array.includes('11') && array.includes('20')) ){
       switch(symbol){
         case 'x':
-          document.getElementById('display').innerHTML = "X wins";
+          X_win();
           break;
         case 'o':
-          document.getElementById('display').innerHTML = "O wins";
+          O_win();
           break;
       }
       return true;
@@ -84,13 +83,12 @@ function checkit(symbol){
     if((x1+x2+x3 == 3 && y1==y2 && y2==y3)){
       switch(symbol){
         case 'x':
-          document.getElementById('display').innerHTML = "X wins";
+          X_win();
           break;
         case 'o':
-          document.getElementById('display').innerHTML = "O wins";
+          O_win();
           break;
       }
-      document.getElementById('reload').classList.remove('hidden');
       return true;
     }
 
@@ -99,17 +97,25 @@ function checkit(symbol){
     if((y1+y2+y3 == 3) && (x1==x2 && x2==x3)){
       switch(symbol){
         case 'x':
-          document.getElementById('display').innerHTML = "X wins";
+          X_win();
           break;
         case 'o':
-          document.getElementById('display').innerHTML = "O wins";
+          O_win();
           break;
       }
-      document.getElementById('reload').classList.remove('hidden');
       return true;
     }
 }
 
+function O_win(){
+  document.getElementById('display').innerHTML = "<a style='color: #FDADC8;'>O wins!</a>";
+  document.getElementById('reload').classList.remove('hidden');
+}
+
+function X_win(){
+  document.getElementById('display').innerHTML = "<a style='color: #3E46CB;'>X wins!</a>";
+  document.getElementById('reload').classList.remove('hidden');
+}
   
 function clearblink(){
   element.innerHTML = "";
@@ -137,12 +143,10 @@ function write(element, id){
       n++;
       O++;
       o_array.push(id);
-      console.log("O =", o_array);
     }else{
       element.innerHTML = "<img src='X.png'>";
       n++;
       X++;
       x_array.push(id);
-      console.log("X =", x_array)
     }
 }

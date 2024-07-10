@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>INFINITE TICTACTOE</h1>
+  <p class="big" id="heading">INFINITE TICTACTOE</p>
+  <div class="note">
+    <em>How to Play?</em><br>Click on any of the grids first to play as '<a style="color: #FDADC8;">O</a>'.<br> The second click(player) plays as '<a style="color: #3E46CB;">X</a>'.<br>After 3 turns of each, the first placed piece should be moved.
+  </div>
   <table>
     <tr>
       <td id='00' class="visible"></td>
@@ -46,11 +49,11 @@
     </tr>
   </table>
 
-  <h1 id="display"></h1>
+  <p class="big" id="display"></p>
 
   <button onclick="location.reload()" class="button hidden" id="reload">🔄️</button>
 
-  <div class="footer">created by Nischal Atreya | 2024</div>
+  <div class="footer"><em>created by</em> Nischal Atreya | 2024</div>
 
 </body>
 <script src="script.js"></script>
