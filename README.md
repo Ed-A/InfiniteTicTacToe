@@ -22,6 +22,8 @@
 - `index.html`: Contains the main HTML structure for the game.
 - `style.css`: Includes the styling for the game grid and blinking effect.
 - `script.js`: Handles the game logic, win conditions, blinking effect, and event listeners.
+- `X.png`: PNG format image for X piece.
+- `O.png`: PNG format image for O piece.
 
 ## Installation
 1. Clone the repository:
